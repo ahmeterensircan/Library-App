@@ -31,3 +31,14 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Node/Frontend
+node_modules/
+frontend/node_modules/
+frontend/build/
+
+# Env/config
+.env
+.env.*
+backend/src/main/resources/application.properties
+backend/src/main/resources/*.local.properties
