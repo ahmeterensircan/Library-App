@@ -140,6 +140,25 @@ ai.sentiment.enabled=true
 ai.sentiment.fallback.enabled=true
 ```
 
+### 6. Gizli Anahtarlar ve Ortam Değişkenleri
+
+- Bu repo, gizli bilgileri commit etmez. `backend/src/main/resources/application.example.properties` dosyasını yerelinizde kopyalayıp doldurun (dosyanın adı `application.properties` olmalı ve commit etmeyin).
+
+PowerShell (Windows) için hızlı kurulum:
+```powershell
+# Backend'i çalıştırmadan önce tek seferlik (oturum bazlı) ayarlar
+$env:SPRING_DATASOURCE_PASSWORD="<mysql_password>"
+$env:HUGGINGFACE_API_KEY="hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+$env:JWT_SECRET="<uzun_guclu_bir_anahtar>"
+$env:JWT_EXPIRATION="86400000"
+```
+
+Yerel dosya ile çalışmak isterseniz:
+```bash
+cp backend/src/main/resources/application.example.properties backend/src/main/resources/application.properties
+# ardından değerleri doldurun (bu dosyayı commit ETMEYİN)
+```
+
 ## 🔧 Konfigürasyon
 
 ### Database Ayarları
